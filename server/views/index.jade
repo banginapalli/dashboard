@@ -1,0 +1,22 @@
+extends ../includes/layout
+
+block main-content
+    //.navbar.navbar-inverse
+            .container-fluid
+            .navbar-header
+                a.navbar-brand(href="/") Dashboard
+            .navbar-collapse.collapse
+                ul.nav.navbar
+                    li
+                        a(herf="/") Home
+    //section.content
+        .pull-right
+            .btn-group
+                .btn.btn-default Month
+                .btn.btn-default Week
+                .btn.btn-default Day
+                input(class="datepicker", data-date-format="dd/mm/yyyy", data-provide="datepicker", data-date-autoclose="true",
+                    data-date-todayhighlight="true",onclick="reachfunc()")
+    #reach-plot
+    //footer.container.text-center
+        p &copy; 2013 Voizzup

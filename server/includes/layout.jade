@@ -1,0 +1,142 @@
+doctype
+html
+    head
+        meta(charset="utf-8")
+        title Dashboard - Voizzup
+        //Description, Keywords and Author
+        meta(name="description" content="Your description")
+        meta(name="keywords" content="Your,Keywords")
+        meta(name="author" content="ResponsiveWebInc")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+        // Styles
+        // Bootstrap CSS
+        link(href="css/bootstrap.min.css" rel="stylesheet")
+        // jQuery UI
+        link(rel="stylesheet" href="css/jquery-ui.css")
+        // jQuery Gritter
+        link(rel="stylesheet" href="css/jquery.gritter.css")
+        // Font awesome CSS
+        link(href="css/font-awesome.min.css" rel="stylesheet")
+        // Custom CSS
+        link(href="css/style.css" rel="stylesheet")
+        link(href="css/reach.css" rel="stylesheet")
+        // Widgets stylesheet
+        link(href="css/widgets.css" rel="stylesheet")
+
+
+        //Favicon
+        link(rel="shortcut icon" href="#")
+
+        //meta(name="viewport", content="width=device-width, initial-scale=1")
+        //title Dashboard
+        //link(href="/favicon.ico", rel="short cut icon", type="image/x-icon")
+        //link(rel="stylesheet", href="/css/bootstrap.css")
+        //link(rel="stylesheet", href="/vendor/bootstrap/dist/css/bootstrap.css")
+        //link(rel="stylesheet", href="/vendor/bootstrap/dist/css/bootstrap-theme.css")
+        //link(rel="stylesheet", href="/vendor/bootstrap-datepicker/css/datepicker3.css")
+        //link(rel="stylesheet", href="/vendor/toastr/toastr.css")
+        //link(rel="stylesheet", href="/css/site.css")
+    body
+        .navbar.navbar-inverse.navbar-fixed-top.bs-docs-nav(role="banner")
+            .container
+        .content
+            .sidebar
+                .sidebar-dropdown
+                    a(href="#") Navigation
+                .sidebar-inner
+                    //.sidebar-widget
+                        form
+                            input(type="text" class="form-control" placeholder="Search")
+                    .sidebar-widget
+                        #todaydate
+            .mainbar
+                .page-head
+                    h2.pull-left Dashboard
+                        span(id="dstxtdate").page-meta Some text here
+                    .bread-crumb.pull-right
+                        a(href="#")
+                            i.fa.fa-home &nbsp Home
+                        span.divider /
+                        a(href="#").bread-current Dashboard
+                    .clearfix
+                .matter
+                    .container
+                        .row
+                            .col-md-12
+                                ul.today-datas
+                                    li.bred
+                                        .pull-left
+                                            span.spark(id="todayspark1")
+                                        .datas-text.pull-right Listeners/Day
+                                            span.bold 12,000
+                                        .clearfix
+                                    li.bgreen
+                                        .pull-left
+                                            i.fa.fa-group
+                                        .datas-text.pull-right Total Listeners
+                                            span.bold 30,000
+                                        .clearfix
+                                    li.blightblue
+                                        .pull-left
+                                            span.spark(id="todayspark2")
+                                        .datas-text.pull-right Bounce rate
+                                            span.bold 15.66%
+                                        .clearfix
+                                    li.bviolet
+                                        .pull-left
+                                            span.spark(id="todayspark3")
+                                        .datas-text.pull-right Five Minute Reach
+                                            span.bold Previous Hour
+                                        .clearfix
+                        .row
+                            .col-md-8
+                                .widget.wlightblue
+                                    .widget-head
+                                        .pull-left Dashboard - Hourly Reach
+                                        .widget-icons.pull-right
+                                            a(href="#").wminimize
+                                                i.fa.fa-chevron-up
+                                            a(href="#").wclose
+                                                i.fa.fa-times
+                                        .clearfix
+                                    .widget-content
+                                        .padd
+                                            #bar-chart
+                            .col-md-4
+                                .widget.wblue
+                                    .widget-head
+                                        .pull-left Today Status
+                                        .widget-icons.pull-right
+                                            a(href="#").wminimize
+                                                i.fa.fa-chevron-up
+                                            a(href="#").wclose
+                                                i.fa.fa-times
+                                        .clearfix
+                                    .widget-content
+                                        .padd
+                                            ul.current-status
+                                                li
+                                                    span(id="status1")
+                                                    span.bold Listeners : 2000 &nbsp
+                                                    i.fa.fa-arrow-up.green
+                                                li
+                                                    span(id="status2")
+                                                    span.bold New Listeners : 500 &nbsp
+                                                    i.fa.fa-arrow-down.red
+                        .row
+                            .col-md-8
+                                .widget.wlightblue
+                                    .widget-head
+                                        .pull-left Dashboard - Quarterly Reach
+                                        .widget-icons.pull-right
+                                            a(href="#").wminimize
+                                                i.fa.fa-chevron-up
+                                            a(href="#").wclose
+                                                i.fa.fa-times
+                                        .clearfix
+                                    .widget-content
+                                        .padd
+                                            #reach-plot
+
+        include scripts
