@@ -106,36 +106,7 @@ var reachfunc = $(function reachgraph(reachdate) {
         {"timestamp": 96, "value": 599}
     ];
 
-    $.getJSON("/reachdata/25-05-2014",
-        function(jsondata) {
-            console.log(jsondata);
-            data = jsondata.reachdata;
-        }
-    );
-    $.ajax({
-        url: 'http://localhost:3030/reachdata/25-05-2014',
-        type: 'get',
-        success: function (rdata) {
-            console.log('success', rdata);
-            data = rdata;
-            console.log(data);
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-            console.log('error', errorThrown);
-        }
-    });
 
-    function makeAjaxCall() {
-        $.get('/reachdata/25-05-2014', function(result) {
-            //alert(result);
-        });
-    }
-
-    makeAjaxCall(); // this will alert the result
-
-
-    //data = reachdata.responseJSON;
-    //console.log(reachdata);
 // Scale bar
     var yMin = d3.min(data.map(function (d) {
         return d.value;
