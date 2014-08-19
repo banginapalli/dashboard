@@ -8,3 +8,18 @@
     stroke: #000;
     shape-rendering: crispEdges;
 }
+
+#progressBar { 
+   border:1px solid #aaa; 
+   color:#fff; 
+   width:800px; 
+   height:20px;
+}
+#progress {
+   background-color:#99CCFF;
+   height:20px;
+   display:inline-block;
+}
+#volume {
+    width:150px;
+}

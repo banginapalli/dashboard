@@ -84,6 +84,31 @@ html
                                             span.bold 15.66%
                                         .clearfix
                         .row
+                            .col-md-12
+                                .widget.wlightblue
+                                    .widget-head
+                                        .pull-left Engagement Map
+                                        .widget-icons.pull-right
+                                            a(href="#").wminimize
+                                                i.fa.fa-chevron-up
+                                            a(href="#").wclose
+                                                i.fa.fa-times
+                                        .clearfix
+                                    .widget-content
+                                        .padd
+                                            canvas(id="engcanvas" width="800" height="350" style="border:1px solid")
+                                            #progressBar
+                                                span#progress
+                                            .clearfix        
+                                        .padd        
+                                            #controls
+                                                .btn.btn-default.pull-left#playpause(title="play" onclick="togglePlayPause()") Play
+                                                input.pull-left#volume(min="0" max="1" step="0.1" type="range" onchange="setVolume()")
+                                            .clearfix    
+                                        .padd
+                                            audio(id="engaud" controls="none")
+                                                source(id="engsrc" src="/audio/Kalimba.mp3")
+                        .row
                             .col-md-8
                                 .widget.wlightblue
                                     .widget-head
@@ -119,7 +144,7 @@ html
                                                     span.bold KPI : 500 &nbsp
                                                     i.fa.fa-arrow-down.red
                         .row
-                            .col-md-8
+                            .col-md-12
                                 .widget.wlightblue
                                     .widget-head
                                         .pull-left Dashboard - Quarterly Reach
@@ -132,5 +157,7 @@ html
                                     .widget-content
                                         .padd
                                             #reach-plot
+                        
+                                    
 
         include scripts
